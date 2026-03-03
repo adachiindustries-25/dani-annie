@@ -3,11 +3,47 @@ import streamlit as st
 st.set_page_config(
     page_title="For Annie",
     layout="centered",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 st.markdown("""
 <style>
+@media (max-width: 768px) {
+    [data-testid="stSidebar"] {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+    [data-testid="stSidebar"][aria-expanded="true"] {
+        width: 75vw !important;
+    }
+    [data-testid="stSidebar"][aria-expanded="false"] {
+        margin-left: -75vw !important;
+    }
+    .main .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 100% !important;
+    }
+    .hero-title {
+        font-size: 2.4rem !important;
+    }
+    .section-title {
+        font-size: 1.6rem !important;
+    }
+    .body-text {
+        font-size: 0.97rem !important;
+    }
+    .pull-quote {
+        font-size: 1.1rem !important;
+    }
+    .memory-placeholder {
+        height: 120px !important;
+    }
+    .moment-placeholder {
+        height: 100px !important;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap');
 
 html, body, [class*="css"] {
