@@ -488,7 +488,6 @@ elif page == "Small Moments":
         ("walk", "Late walks", "The kind where neither of us really wants to call it yet so we just keep going. Conversation or no conversation, it didn't really matter either way."),
         ("food", "Random food runs", "Nothing planned, nothing fancy. Just hungry and together and that being enough. Some of the best conversations honestly happened in these moments."),
         ("jokes", "The jokes that stuck", "The ones that got funnier every time one of you brought it back up. Inside jokes are basically proof that you were actually paying attention to each other."),
-        ("texts", "The texts that landed", "When you're just going about your day and a message comes through and it just makes it better. Small thing but real."),
         ("space", "Just being in the same space", "Not every moment needs to be an event. Sometimes being around someone comfortable is genuinely the whole thing."),
         ("nowords", "The moments that didn't need words", "When something just gets understood without anyone having to say it out loud. That doesn't happen with just anyone."),
     ]
