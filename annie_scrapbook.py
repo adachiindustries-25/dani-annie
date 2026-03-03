@@ -442,18 +442,14 @@ elif page == "Memories":
 # PAGE 4 - SMALL MOMENTS
 elif page == "Small Moments":
     page_header("the ones you almost forget", "Small Moments")
-
     body(
         "Not going to lie, the big moments are easy to hold onto. "
         "It's the small ones that kind of sneak up on you later.<br><br>"
         "The ones that didn't feel like much at the time but somehow end up being "
         "the ones you actually think about."
     )
-
     quote("The quiet ones always end up being the ones that stick though. You feel me?")
-
     spacer(6)
-
     moments = [
         ("walk", "Late walks", "The kind where neither of you really wants to call it yet so you just keep going. Conversation or no conversation, it didn't really matter either way."),
         ("food", "Random food runs", "Nothing planned, nothing fancy. Just hungry and together and that being enough. Some of the best conversations honestly happen in those moments."),
@@ -462,7 +458,6 @@ elif page == "Small Moments":
         ("space", "Just being in the same space", "Not every moment needs to be an event. Sometimes being around someone comfortable is genuinely the whole thing."),
         ("nowords", "The moments that didn't need words", "When something just gets understood without anyone having to say it out loud. That doesn't happen with just anyone."),
     ]
-
     for key, title, desc in moments:
         st.markdown(
             f"<div class='moment-bubble'>"
@@ -472,29 +467,28 @@ elif page == "Small Moments":
             unsafe_allow_html=True
         )
         uploaded = st.file_uploader(
-            "add a photo",
-            type=["jpg", "jpeg", "png", "gif"],
+            "add a photo or video",
+            type=["jpg", "jpeg", "png", "gif", "mp4", "mov"],
             key=f"moment_{key}",
             label_visibility="collapsed",
         )
         if uploaded:
-            st.image(uploaded, use_container_width=True)
+            if uploaded.type.startswith("image"):
+                st.image(uploaded, use_container_width=True)
+            elif uploaded.type.startswith("video"):
+                st.video(uploaded)
             st.markdown(f"<div class='memory-caption'>{title.lower()}</div>", unsafe_allow_html=True)
         else:
-            st.markdown("<div class='memory-placeholder'>drop a photo here</div>", unsafe_allow_html=True)
+            st.markdown("<div class='memory-placeholder'>drop a photo or video here</div>", unsafe_allow_html=True)
         spacer(10)
-
     st.markdown("<hr class='soft-divider'>", unsafe_allow_html=True)
-
     body(
         "These are the things I think about when I think about this time. "
         "Not the big stuff, just like the texture of it if that makes sense. The everyday things that you only "
         "properly appreciate once they're a bit further away.<br><br>"
         "Grateful for all of it, even the small bits."
     )
-
     st.markdown("<div class='footer'>x</div>", unsafe_allow_html=True)
-
 
 # PAGE 5 - WHY THIS EXISTS
 elif page == "Why This Exists":
