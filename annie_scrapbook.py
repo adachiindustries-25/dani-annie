@@ -327,7 +327,7 @@ if page == "Welcome":
     st.markdown("""
     <div class='page-wrapper' style='text-align:center; padding: 2.5rem 0 1rem 0;'>
         <div class='hero-title'>For Annie</div>
-        <div class='hero-subtitle'>a small project, started around valentine's day</div>
+        <div class='hero-subtitle'>a visualised concept of our love :) </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -357,9 +357,7 @@ if page == "Welcome":
     spacer(10)
     st.markdown("""
     <div style='text-align:center; margin-top:1.5rem;'>
-        <span class='pill'>three months</span>
-        <span class='pill'>valentine's day</span>
-        <span class='pill'>made with care</span>
+        <span class='pill'>made with love and care</span>
     </div>
     """, unsafe_allow_html=True)
 
